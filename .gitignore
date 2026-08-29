@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+out/
+dist-ssr/
+
+# Logs
+*.log
+build.log
+
+# Secrets - ignore all .env except .env.example
+.env
+.env.*
+!.env.example
+
+# Supabase docker leftover secrets
+supabase-docker/.env.old
+
+# Windows reserved-name artifact (portfolio/nul) - cannot be indexed, exclude
+portfolio/nul
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

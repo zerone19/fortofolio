@@ -1,0 +1,100 @@
+/* ============================================================
+   Media Modal & Hover Overlay — self-contained (no Tailwind dep)
+   Used by assets/js/main.js for project & certificate previews.
+   ============================================================ */
+
+/* ---- Hover overlay button on cards ---- */
+.media-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(15, 23, 42, 0.45);
+  opacity: 0;
+  pointer-events: none;            /* let card hover pass through when hidden */
+  transition: opacity .35s ease, transform .35s ease;
+  transform: translateY(8px);
+  z-index: 5;
+}
+.media-card:hover .media-overlay,
+.media-preview:hover .media-overlay {
+  opacity: 1;
+  pointer-events: auto;           /* clickable only when visible */
+  transform: translateY(0);
+}
+.media-view-btn {
+  pointer-events: auto;
+  border: 1px solid #2ac7fb;
+  color: #2ac7fb;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: 10px 18px;
+  background: transparent;
+  cursor: pointer;
+  transition: background .2s ease, color .2s ease, transform .2s ease;
+}
+.media-view-btn:hover {
+  background: #2ac7fb;
+  color: #06222e;
+  transform: scale(1.04);
+}
+
+/* ---- Modal (pop-out) ---- */
+.media-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;                 /* toggled to flex via JS */
+  align-items: center;
+  justify-content: center;
+  background: rgba(8, 15, 25, 0.82);
+  padding: 24px;
+}
+.media-modal.is-open { display: flex; }
+.media-modal-box {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  max-height: 88vh;
+  background: #f5fafe;
+  border: 1px solid rgba(42, 199, 251, .45);
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,.5);
+}
+.media-modal-body {
+  padding: 8px;
+  max-height: 82vh;
+  overflow: auto;
+}
+.media-modal-body img,
+.media-modal-body video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.media-modal-body iframe {
+  width: 100%;
+  height: 80vh;
+  border: 0;
+  background: #fff;
+}
+.media-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+  border: 1px solid #2ac7fb;
+  color: #2ac7fb;
+  background: rgba(245,250,254,.9);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: background .2s ease, color .2s ease;
+}
+.media-modal-close:hover { background: #2ac7fb; color: #06222e; }
