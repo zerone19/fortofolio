@@ -1,0 +1,25 @@
+{
+  "name": "personal-developer-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Personal developer portfolio — static, frontend-only. PRD/MVP compliant, built with Stitch 'Kinetic Blueprint Light' template assets (placeholders).",
+  "scripts": {
+    "dev": "npx --yes serve -l 3000 .",
+    "start": "npx --yes serve -l 3000 .",
+    "build": "npx --yes tailwindcss -i ./assets/css/input.css -o ./assets/css/site.css --minify",
+    "watch": "npx --yes tailwindcss -i ./assets/css/input.css -o ./assets/css/site.css --watch",
+    "preview": "npm run dev"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  },
+  "keywords": [
+    "portfolio",
+    "developer",
+    "static-site"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.112.3"
+  }
+}

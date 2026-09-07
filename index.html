@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <!-- ===================== SEO / META ===================== -->
+  <title id="doc-title">ASCJUL NUR HIDAYAH — Developer & Programmer</title>
+  <meta name="description" content="Personal portfolio of Ascjul Nur Hidayah, a Sistem & Teknologi Informasi student and developer exploring software development, web technologies, backend, databases, and DevOps tooling.">
+  <meta name="author" content="Ascjul Nur Hidayah">
+  <meta name="theme-color" content="#f5fafe">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ASCJUL NUR HIDAYAH — Developer & Programmer">
+  <meta property="og:description" content="Personal portfolio of Ascjul Nur Hidayah — Sistem & Teknologi Informasi student and developer.">
+  <!-- TODO: ADD og:image -> letakkan file di public/og-cover.png lalu ganti baris di bawah -->
+  <meta property="og:image" content="public/og-cover.png">
+  <meta property="og:url" content="https://your-domain.example.com">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ASCJUL NUR HIDAYAH — Developer & Programmer">
+  <meta name="twitter:description" content="Personal portfolio of Ascjul Nur Hidayah — Sistem & Teknologi Informasi student and developer.">
+
+  <!-- ===================== FAVICON (inline SVG, blueprint motif) ===================== -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230e0e0e'/><rect x='6' y='6' width='20' height='20' fill='none' stroke='%232ac7fb' stroke-width='2'/><rect x='6' y='6' width='4' height='4' fill='%23ffde59'/></svg>">
+
+  <!-- ===================== FONTS ===================== -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&family=Sora:wght@400;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap&icon_names=alternate_email,code,emoji_events,forum,link,menu,photo_camera,terminal,work" rel="stylesheet">
+
+  <!-- ===================== THEME MOTIFS (Tailwind build output) ===================== -->
+  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="stylesheet" href="assets/css/media-modal.css">
+</head>
+
+<body class="bg-surface text-on-surface antialiased overflow-x-hidden selection:bg-blueprint-cyan selection:text-on-primary-fixed greeble-grid">
+
+  <!-- ===================== TOP NAVBAR ===================== -->
+  <nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-neutral-border">
+    <div class="flex justify-between items-center px-margin-sm md:px-margin-lg h-20 max-w-[1440px] mx-auto">
+      <a href="#home" class="flex items-center gap-3" data-nav-link>
+        <img id="brand-text" alt="PROJECT : ARONA" class="h-8 w-auto max-w-[200px] object-contain" src="assets/img/brand-logo.svg">
+      </a>
+
+      <!-- Desktop nav -->
+      <div class="hidden md:flex items-center gap-8 font-label-caps text-label-caps">
+        <a data-nav-link href="#home" class="text-blueprint-cyan font-bold border-b-2 border-blueprint-cyan pb-1 hover:text-blueprint-cyan transition-colors duration-200">PROFILE</a>
+        <a data-nav-link href="#journey" class="text-on-surface-variant hover:text-blueprint-cyan transition-colors duration-200">JOURNEY</a>
+        <a data-nav-link href="#experience" class="text-on-surface-variant hover:text-blueprint-cyan transition-colors duration-200">EXPERIENCE</a>
+        <a data-nav-link href="#projects" class="text-on-surface-variant hover:text-blueprint-cyan transition-colors duration-200">PROJECTS</a>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <a href="#contact" class="hidden md:inline-block bg-primary text-on-primary font-label-caps text-label-caps px-6 py-2 uppercase hover:-translate-y-[2px] transition-transform duration-200">CONNECT</a>
+        <!-- Mobile toggle -->
+        <button id="nav-toggle" class="md:hidden text-on-surface-variant" aria-label="Toggle menu">
+          <span class="material-symbols-outlined text-[28px]">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-surface border-b border-neutral-border px-margin-sm py-4 font-label-caps text-label-caps">
+      <div class="flex flex-col gap-4">
+        <a data-nav-link href="#home" class="text-blueprint-cyan">PROFILE</a>
+        <a data-nav-link href="#journey" class="text-on-surface-variant">JOURNEY</a>
+        <a data-nav-link href="#experience" class="text-on-surface-variant">EXPERIENCE</a>
+        <a data-nav-link href="#projects" class="text-on-surface-variant">PROJECTS</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-[1440px] mx-auto px-margin-sm md:px-margin-lg pt-32 pb-margin-lg">
+
+    <!-- ===================== HERO / PROFILE ===================== -->
+    <section id="home" class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-margin-lg items-center relative min-h-[60vh]">
+      <div id="hero-root" class="contents"></div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section id="about" class="mb-margin-lg scroll-mt-24">
+      <div class="flex justify-between items-end mb-8 border-b border-outline-variant pb-2">
+        <h2 class="font-headline-md text-headline-md text-on-surface">ABOUT // PROFILE</h2>
+        <span class="font-label-caps text-label-caps text-outline">DATA_SET_00</span>
+      </div>
+      <div id="about-body"></div>
+    </section>
+
+    <!-- ===================== JOURNEY ===================== -->
+    <section id="journey" class="mb-margin-lg scroll-mt-24">
+      <div class="flex justify-between items-end mb-8 border-b border-outline-variant pb-2">
+        <h2 class="font-headline-md text-headline-md text-on-surface">JOURNEY</h2>
+        <span class="font-label-caps text-label-caps text-outline">TRACE_01</span>
+      </div>
+      <div id="journey-body"></div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section id="skills" class="mb-margin-lg scroll-mt-24">
+      <div class="flex justify-between items-end mb-8 border-b border-outline-variant pb-2">
+        <h2 class="font-headline-md text-headline-md text-on-surface">TECH STACK</h2>
+        <span class="font-label-caps text-label-caps text-outline">DATA_SET_02</span>
+      </div>
+      <div id="skills-body"></div>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section id="projects" class="mb-margin-lg scroll-mt-24">
+      <div class="flex justify-between items-end mb-8 border-b border-outline-variant pb-2">
+        <h2 class="font-headline-md text-headline-md text-on-surface">PROJECTS</h2>
+        <span class="font-label-caps text-label-caps text-outline">DATA_SET_03</span>
+      </div>
+      <div id="projects-body"></div>
+    </section>
+
+    <!-- ===================== EXPERIENCE ===================== -->
+    <section id="experience" class="mb-margin-lg scroll-mt-24">
+      <div class="flex justify-between items-end mb-8 border-b border-outline-variant pb-2">
+        <h2 class="font-headline-md text-headline-md text-on-surface">EXPERIENCE</h2>
+        <span class="font-label-caps text-label-caps text-outline">DATA_SET_04</span>
+      </div>
+      <div id="experience-body"></div>
+    </section>
+
+    <!-- ===================== EDUCATION ===================== -->
+    <section id="education" class="mb-margin-lg scroll-mt-24">
+      <div class="flex justify-between items-end mb-8 border-b border-outline-variant pb-2">
+        <h2 class="font-headline-md text-headline-md text-on-surface">EDUCATION</h2>
+        <span class="font-label-caps text-label-caps text-outline">DATA_SET_05</span>
+      </div>
+      <div id="education-body"></div>
+    </section>
+
+    <!-- ===================== CERTIFICATES ===================== -->
+    <section id="certificates" class="mb-margin-lg scroll-mt-24">
+      <div class="flex justify-between items-end mb-8 border-b border-outline-variant pb-2">
+        <h2 class="font-headline-md text-headline-md text-on-surface">CERTIFICATES</h2>
+        <span class="font-label-caps text-label-caps text-outline">DATA_SET_06</span>
+      </div>
+      <div id="certificates-body"></div>
+    </section>
+
+    <!-- ===================== ACHIEVEMENTS (auto-hidden if empty) ===================== -->
+    <section id="achievements" class="mb-margin-lg scroll-mt-24">
+      <div class="flex justify-between items-end mb-8 border-b border-outline-variant pb-2">
+        <h2 class="font-headline-md text-headline-md text-on-surface">ACHIEVEMENTS</h2>
+        <span class="font-label-caps text-label-caps text-outline">DATA_SET_07</span>
+      </div>
+      <div id="achievements-body"></div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section id="contact" class="mb-margin-lg scroll-mt-24">
+      <div class="flex justify-between items-end mb-8 border-b border-outline-variant pb-2">
+        <h2 class="font-headline-md text-headline-md text-on-surface">CONTACT</h2>
+        <span class="font-label-caps text-label-caps text-outline">DATA_SET_08</span>
+      </div>
+      <div id="contact-body"></div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="w-full py-12 bg-surface border-t border-neutral-border">
+    <div class="flex flex-col md:flex-row justify-between items-center px-margin-sm md:px-margin-lg max-w-[1440px] mx-auto gap-gutter">
+      <div class="font-label-caps text-label-caps text-secondary">
+        ©<span id="year">2026</span> <span id="brand-footer">PROJECT : ARONA</span> // ALL RIGHTS RESERVED
+      </div>
+      <div class="flex gap-6 font-label-sm text-label-sm">
+        <a class="text-outline hover:text-blueprint-cyan transition-colors duration-200" href="#home">PROFILE</a>
+        <a class="text-outline hover:text-blueprint-cyan transition-colors duration-200" href="#projects">PROJECTS</a>
+        <a class="text-outline hover:text-blueprint-cyan transition-colors duration-200" href="#contact">CONTACT</a>
+        <a class="text-outline hover:text-blueprint-cyan transition-colors duration-200" href="#" id="doc-top">↑ TOP</a>
+      </div>
+    </div>
+  </footer>
+
+  <noscript>
+    <div style="padding:2rem;text-align:center;font-family:monospace;color:#006684;">
+      This portfolio requires JavaScript to render content from its data file.
+      Please enable JavaScript, or edit <code>assets/js/data.js</code> and serve the folder.
+    </div>
+  </noscript>
+
+  <!-- ===================== SCRIPTS ===================== -->
+  <script src="assets/js/data.js"></script>
+  <script type="module" src="assets/js/api.js"></script>
+  <script type="module" src="assets/js/main.js"></script>
+  <script>
+    // Brand footer from data (graceful if data missing)
+    (function () {
+      var P = window.PORTFOLIO || {};
+      var b = (P.brand) || "PROJECT : ARONA";
+      var f = document.getElementById("brand-footer");
+      if (f) f.textContent = b;
+      var dt = document.getElementById("doc-title");
+      if (dt && P.profile) dt.textContent = (P.profile.name || "Portfolio") + " — Developer Portfolio";
+    })();
+  </script>
+</body>
+</html>
